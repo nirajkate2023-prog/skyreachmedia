@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Syne', 'Space Grotesk', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #08090C;
+  color: #EDF2F7;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #08090C;
+  color: #EDF2F7;
+  overflow-x: hidden;
+  selection-background-color: #FF5E14;
+  selection-color: #000000;
+}
+
+::selection {
+  background-color: #FF5E14;
+  color: #000000;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08090C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232A3B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5E14;
+}
+
+/* Fluid Typography Utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Smooth Image Mask */
+.mask-radial {
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}

@@ -35,7 +35,7 @@ const config: Config = {
         }
       },
       fontFamily: {
-        display: ['var(--font-display)', 'Syne', 'Space Grotesk', 'sans-serif'],
+        display: ['var(--font-display)', 'Playfair Display', 'Space Grotesk', 'serif'],
         sans: ['var(--font-sans)', 'Plus Jakarta Sans', 'Inter', 'sans-serif'],
         mono: ['var(--font-mono)', 'JetBrains Mono', 'monospace'],
       },

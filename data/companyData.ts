@@ -6,12 +6,12 @@ export const COMPANY_DATA = {
   foundingYear: 2012,
   experienceYears: 12,
   address: {
-    street: 'Office 603, The Work Club, Finolex Chowk, PCMC Metro Station',
-    city: 'Pune',
+    street: 'Office B307, Gera\'s Imperium Gateway, near Nashik Phata Flyover, Kasarwadi',
+    city: 'Pimpri-Chinchwad',
     state: 'Maharashtra',
-    postalCode: '411019',
+    postalCode: '411034',
     country: 'India',
-    full: 'Office 603, The Work Club, Finolex Chowk, PCMC Metro Station, Pune, Maharashtra 411019, India'
+    full: 'Office B307, Gera\'s Imperium Gateway, near Nashik Phata Flyover, Kasarwadi, Pune, Pimpri-Chinchwad, Maharashtra 411034, India'
   },
   contact: {
     phone: '+91 9276686868',

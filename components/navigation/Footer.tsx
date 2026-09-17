@@ -72,8 +72,13 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="text-zinc-400 hover:text-white transition-colors">
+                  Blog & Growth Articles
+                </Link>
+              </li>
+              <li>
                 <Link href="/insights" className="text-zinc-400 hover:text-white transition-colors">
-                  Insights & Blog
+                  Strategic Insights
                 </Link>
               </li>
               <li>
@@ -146,7 +151,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar: Copyright + Socials + Brand Tagline */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4 text-xs font-mono text-zinc-500">
+          <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-zinc-500">
             <span>© {new Date().getFullYear()} SkyReach Media. All rights reserved.</span>
             <span>•</span>
             <span className="tracking-[0.15em] flex items-center gap-1.5">
@@ -156,6 +161,13 @@ export const Footer: React.FC = () => {
               <span className="text-brand-orange">|</span>
               <span className="text-white font-semibold">Dominate</span>
             </span>
+            <span>•</span>
+            <Link
+              href="/admin"
+              className="text-zinc-600 hover:text-zinc-400 transition-colors"
+            >
+              Admin Portal
+            </Link>
           </div>
 
           {/* Social Links */}

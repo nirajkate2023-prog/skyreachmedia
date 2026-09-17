@@ -63,8 +63,12 @@ export const Navbar: React.FC = () => {
               <span className="font-display text-lg sm:text-xl font-bold tracking-tight text-white flex items-center">
                 SkyReach<span className="text-brand-orange">Media</span>
               </span>
-              <span className="font-mono text-[9px] uppercase tracking-widest text-brand-muted -mt-0.5">
-                Strategic Growth
+              <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-brand-muted -mt-0.5 flex items-center gap-1">
+                <span>Innovate</span>
+                <span className="text-brand-orange">·</span>
+                <span>Elevate</span>
+                <span className="text-brand-orange">·</span>
+                <span>Dominate</span>
               </span>
             </div>
           </Link>
@@ -160,7 +164,7 @@ export const Navbar: React.FC = () => {
             {/* Mobile Contact Quick Actions */}
             <div className="pt-6 border-t border-white/10 flex flex-col gap-4">
               <div className="flex items-center justify-between text-xs font-mono text-zinc-400">
-                <span>PUNE HQ</span>
+                <span>KASARWADI HQ</span>
                 <span className="text-white">+91 92766 86868</span>
               </div>
               <div className="grid grid-cols-2 gap-3">

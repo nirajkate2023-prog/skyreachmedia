@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="relative bg-[#06070A] text-white pt-24 pb-12 border-t border-white/10 overflow-hidden">
       {/* Background Radial Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-brand-orange/5 blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] sm:w-[800px] h-[200px] sm:h-[350px] bg-brand-orange/5 blur-[80px] sm:blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         {/* Top Grid: Brand Statement + Quick Navigation + Services Matrix + Pune HQ */}
@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
               </Link>
 
               <p className="mt-6 text-sm text-zinc-400 leading-relaxed max-w-sm">
-                A modern growth, marketing, and creative partner helping ambitious businesses reach higher through strategic clarity, creative velocity, and algorithmic ROAS.
+                A modern growth, marketing, and creative partner that innovates boldly, elevates brands with purpose, and dominates every channel with data-driven precision.
               </p>
             </div>
 
@@ -107,7 +107,7 @@ export const Footer: React.FC = () => {
           {/* Col 4: Pune HQ & Direct Channels (3 Cols) */}
           <div className="lg:col-span-3 flex flex-col gap-4">
             <h4 className="font-mono text-xs font-bold uppercase tracking-widest text-brand-orange mb-2">
-              Pune Headquarters
+              Kasarwadi Headquarters
             </h4>
 
             <div className="flex items-start gap-3 text-xs text-zinc-300">
@@ -149,7 +149,13 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-4 text-xs font-mono text-zinc-500">
             <span>© {new Date().getFullYear()} SkyReach Media. All rights reserved.</span>
             <span>•</span>
-            <span className="text-zinc-400">{COMPANY_DATA.tagline}</span>
+            <span className="tracking-[0.15em] flex items-center gap-1.5">
+              <span className="text-white font-semibold">Innovate</span>
+              <span className="text-brand-orange">|</span>
+              <span className="text-white font-semibold">Elevate</span>
+              <span className="text-brand-orange">|</span>
+              <span className="text-white font-semibold">Dominate</span>
+            </span>
           </div>
 
           {/* Social Links */}

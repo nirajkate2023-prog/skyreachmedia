@@ -295,7 +295,7 @@ export const ProjectPlanner: React.FC = () => {
         {/* Pune Headquarters Card */}
         <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-xl space-y-6">
           <span className="font-mono text-xs font-bold uppercase tracking-widest text-brand-orange block">
-            PUNE HEADQUARTERS
+            KASARWADI HQ · PIMPRI-CHINCHWAD
           </span>
 
           <div className="flex items-start gap-3 text-sm text-zinc-300">

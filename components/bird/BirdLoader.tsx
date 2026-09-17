@@ -22,6 +22,20 @@ export const BirdLoader: React.FC<BirdLoaderProps> = ({ onComplete }) => {
       return;
     }
 
+    // On mobile/touch devices cap the loader to 1.2s max for better FCP
+    const isMobile = window.matchMedia('(pointer: coarse)').matches;
+    if (isMobile) {
+      const mobileTimer = setTimeout(() => {
+        setIsExiting(true);
+        setTimeout(() => {
+          setIsFinished(true);
+          sessionStorage.setItem('skyreach_loaded', 'true');
+          if (onComplete) onComplete();
+        }, 600);
+      }, 1200);
+      return () => clearTimeout(mobileTimer);
+    }
+
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {

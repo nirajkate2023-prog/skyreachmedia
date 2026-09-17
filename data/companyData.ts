@@ -1,8 +1,8 @@
 export const COMPANY_DATA = {
   name: 'SkyReach Media',
   legalName: 'SkyReach Media Digital Agency',
-  tagline: 'Reach Higher. Grow Smarter.',
-  mission: 'We help ambitious brands reach higher through strategic growth, modern creative engineering, and high-velocity performance marketing.',
+  tagline: 'Innovate | Elevate | Dominate',
+  mission: 'We engineer ambitious brands into market leaders through bold innovation, creative velocity, and data-driven performance that dominates every channel.',
   foundingYear: 2012,
   experienceYears: 12,
   address: {

@@ -11,6 +11,11 @@ import { COMPANY_DATA } from '@/data/companyData';
 export const HeroSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    setIsTouchDevice(window.matchMedia('(pointer: coarse)').matches);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -21,6 +26,7 @@ export const HeroSection: React.FC = () => {
   const opacityHero = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (isTouchDevice) return;
     const { clientX, clientY } = e;
     const { innerWidth, innerHeight } = window;
     const x = (clientX / innerWidth - 0.5) * 30;
@@ -39,9 +45,9 @@ export const HeroSection: React.FC = () => {
         style={{ y: yBg }}
         className="absolute inset-0 pointer-events-none overflow-hidden"
       >
-        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-brand-orange/15 blur-[160px] rounded-full" />
-        <div className="absolute top-[40%] right-[10%] w-[450px] h-[450px] bg-amber-500/10 blur-[140px] rounded-full" />
-        <div className="absolute bottom-[10%] left-[5%] w-[400px] h-[400px] bg-sky-500/5 blur-[120px] rounded-full" />
+        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[400px] sm:w-[900px] h-[250px] sm:h-[500px] bg-brand-orange/15 blur-[80px] sm:blur-[160px] rounded-full" />
+        <div className="absolute top-[40%] right-[10%] w-[200px] sm:w-[450px] h-[200px] sm:h-[450px] bg-amber-500/10 blur-[60px] sm:blur-[140px] rounded-full" />
+        <div className="absolute bottom-[10%] left-[5%] w-[180px] sm:w-[400px] h-[180px] sm:h-[400px] bg-sky-500/5 blur-[50px] sm:blur-[120px] rounded-full" />
 
         {/* Minimal Grid Overlay */}
         <div
@@ -67,7 +73,7 @@ export const HeroSection: React.FC = () => {
         >
           <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
           <span className="font-mono text-xs uppercase tracking-widest text-zinc-300">
-            2026 Strategic Growth Partner
+            2026 Innovation &amp; Elevation Partner
           </span>
           <span className="text-zinc-600">•</span>
           <span className="font-mono text-xs text-brand-orange font-semibold">12+ Years Expertise</span>
@@ -109,11 +115,13 @@ export const HeroSection: React.FC = () => {
             <div className="relative p-8 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl group hover:border-brand-orange/40 transition-colors">
               <SkyReachBird size={120} animateWing={true} glow={true} />
               <div className="mt-4 text-center">
-                <span className="font-mono text-[11px] font-bold tracking-widest text-brand-orange uppercase block">
-                  REACH HIGHER
+                <span className="font-mono text-[10px] font-bold tracking-widest text-brand-orange uppercase flex items-center justify-center gap-1">
+                  <span>Innovate</span>
+                  <span className="text-white/40">·</span>
+                  <span>Elevate</span>
                 </span>
                 <span className="font-mono text-[9px] text-zinc-500 uppercase">
-                  Pune HQ • Digital Elevation
+                  Kasarwadi HQ · Dominate
                 </span>
               </div>
             </div>

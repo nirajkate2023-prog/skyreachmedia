@@ -80,7 +80,7 @@ export default function RootLayout({
     name: COMPANY_DATA.name,
     legalName: COMPANY_DATA.legalName,
     url: 'https://skyreachmedia.in',
-    logo: 'https://skyreachmedia.in/assets/img/logo.png',
+    logo: 'https://skyreachmedia.in/brand/skyreach-logo.png',
     description: COMPANY_DATA.mission,
     telephone: COMPANY_DATA.contact.phone,
     email: COMPANY_DATA.contact.email,

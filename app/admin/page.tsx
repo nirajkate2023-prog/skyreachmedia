@@ -9,7 +9,7 @@ import { blogService } from '@/lib/blogService';
 import { BLOG_TEMPLATES } from '@/lib/blogTemplates';
 import { BlogPost, BlogTemplateType } from '@/lib/types/blog';
 import { getSupabaseConfig } from '@/lib/supabase';
-import { SkyReachBird } from '@/components/bird/SkyReachBird';
+import { BrandLogo } from '@/components/brand/BrandLogo';
 import {
   PlusCircle,
   FileText,
@@ -322,11 +322,8 @@ export default function AdminDashboardPage() {
       <header className="sticky top-0 z-40 bg-[#0B0C10]/95 backdrop-blur-md border-b border-white/10 px-6 py-3.5">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Link href="/" className="flex items-center gap-2.5">
-              <SkyReachBird size={30} animateWing={false} />
-              <span className="font-display text-lg font-bold tracking-tight">
-                SkyReach<span className="text-brand-orange">Media</span>
-              </span>
+            <Link href="/" className="flex items-center" aria-label="SkyReach Media Home">
+              <BrandLogo variant="horizontal" className="h-8 w-auto" />
             </Link>
             <span className="px-2.5 py-0.5 rounded-full bg-brand-orange/15 border border-brand-orange/30 text-[11px] font-mono font-bold text-brand-orange uppercase">
               Admin Studio

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { SectionHeading } from '../ui/SectionHeading';
-import { SkyReachBird } from '../bird/SkyReachBird';
+import { BrandLogo } from '../brand/BrandLogo';
 import { ArrowUpRight, CheckCircle, MapPin, Sparkles } from 'lucide-react';
 import { COMPANY_DATA } from '@/data/companyData';
 
@@ -43,7 +43,7 @@ export const AboutSection: React.FC = () => {
 
             {/* Overlapping Bird Floating Accent */}
             <div className="hidden sm:flex absolute -top-8 -right-8 p-4 rounded-2xl bg-brand-dark/95 border border-brand-orange/30 backdrop-blur-md shadow-xl items-center gap-3">
-              <SkyReachBird size={36} animateWing={true} glow={true} />
+              <BrandLogo variant="mark" size={36} glow />
               <div>
                 <span className="font-mono text-[10px] text-brand-orange font-bold uppercase block">
                   12+ Years Heritage

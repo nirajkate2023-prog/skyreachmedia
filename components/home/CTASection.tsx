@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { SkyReachBird } from '../bird/SkyReachBird';
+import { BrandLogo } from '../brand/BrandLogo';
 import { MagneticButton } from '../ui/MagneticButton';
 import { ArrowUpRight, MessageSquare, Phone, MapPin } from 'lucide-react';
 import { COMPANY_DATA } from '@/data/companyData';
@@ -22,7 +22,7 @@ export const CTASection: React.FC = () => {
         transition={{ duration: 4, ease: 'easeOut' }}
         className="absolute top-12 left-1/4 pointer-events-none hidden md:block"
       >
-        <SkyReachBird size={160} animateWing={true} glow={false} />
+        <BrandLogo variant="mark" size={160} />
       </motion.div>
 
       <div className="max-w-5xl mx-auto relative z-10 text-center flex flex-col items-center">
@@ -33,7 +33,7 @@ export const CTASection: React.FC = () => {
           viewport={{ once: true }}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-orange/15 border border-brand-orange/30 backdrop-blur-md mb-8"
         >
-          <SkyReachBird size={24} animateWing={true} glow={false} />
+          <BrandLogo variant="mark" size={24} />
           <span className="font-mono text-xs font-bold uppercase tracking-widest text-brand-orange">
             NEXT LEVEL SCALE
           </span>

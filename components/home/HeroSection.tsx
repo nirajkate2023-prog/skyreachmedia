@@ -3,7 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { SkyReachBird } from '../bird/SkyReachBird';
+import { BrandLogo } from '../brand/BrandLogo';
 import { MagneticButton } from '../ui/MagneticButton';
 import { ArrowUpRight, ArrowDown, Sparkles, TrendingUp, ShieldCheck } from 'lucide-react';
 import { COMPANY_DATA } from '@/data/companyData';
@@ -113,17 +113,11 @@ export const HeroSection: React.FC = () => {
             className="hidden lg:flex lg:col-span-3 justify-center items-center relative transition-transform duration-300 ease-out"
           >
             <div className="relative p-8 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl group hover:border-brand-orange/40 transition-colors">
-              <SkyReachBird size={120} animateWing={true} glow={true} />
-              <div className="mt-4 text-center">
-                <span className="font-mono text-[10px] font-bold tracking-widest text-brand-orange uppercase flex items-center justify-center gap-1">
-                  <span>Innovate</span>
-                  <span className="text-white/40">·</span>
-                  <span>Elevate</span>
-                </span>
-                <span className="font-mono text-[9px] text-zinc-500 uppercase">
-                  Kasarwadi HQ · Dominate
-                </span>
-              </div>
+              <BrandLogo
+                variant="stacked"
+                priority
+                className="h-36 sm:h-40 w-auto mx-auto transform transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
           </motion.div>
         </div>

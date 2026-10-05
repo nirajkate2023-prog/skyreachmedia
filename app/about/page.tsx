@@ -6,7 +6,7 @@ import { COMPANY_DATA } from '@/data/companyData';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { MetricsSection } from '@/components/home/MetricsSection';
 import { CTASection } from '@/components/home/CTASection';
-import { SkyReachBird } from '@/components/bird/SkyReachBird';
+import { BrandLogo } from '@/components/brand/BrandLogo';
 import { ArrowUpRight, CheckCircle2, MapPin, Award, Users, Target, Rocket } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -69,7 +69,7 @@ export default function AboutPage() {
 
             <div className="pt-4 flex items-center gap-4">
               <div className="p-4 rounded-2xl bg-brand-orange/15 border border-brand-orange/30 inline-flex items-center gap-3">
-                <SkyReachBird size={36} animateWing={true} glow={true} />
+                <BrandLogo variant="mark" size={36} glow />
                 <div>
                   <span className="font-mono text-xs font-bold text-white uppercase block">
                     The SkyReach Symbol

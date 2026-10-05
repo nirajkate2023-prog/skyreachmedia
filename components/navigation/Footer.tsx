@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { SkyReachBird } from '../bird/SkyReachBird';
+import { BrandLogo } from '../brand/BrandLogo';
 import { COMPANY_DATA } from '@/data/companyData';
 import { SERVICES_DATA } from '@/data/servicesData';
 import { ArrowUpRight, Mail, Phone, MapPin, Instagram, Linkedin, Facebook, MessageSquare } from 'lucide-react';
@@ -20,16 +20,11 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Positioning (4 Cols) */}
           <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
-              <Link href="/" className="inline-flex items-center gap-3 group">
-                <SkyReachBird size={42} animateWing={true} glow={true} />
-                <div className="flex flex-col">
-                  <span className="font-display text-2xl font-bold tracking-tight text-white">
-                    SkyReach<span className="text-brand-orange">Media</span>
-                  </span>
-                  <span className="font-mono text-[10px] tracking-widest text-brand-muted uppercase">
-                    Pune • Maharashtra • India
-                  </span>
-                </div>
+              <Link href="/" className="inline-flex group" aria-label="SkyReach Media Home">
+                <BrandLogo
+                  variant="stacked"
+                  className="h-28 sm:h-32 w-auto transform transition-transform duration-300 group-hover:scale-[1.03]"
+                />
               </Link>
 
               <p className="mt-6 text-sm text-zinc-400 leading-relaxed max-w-sm">

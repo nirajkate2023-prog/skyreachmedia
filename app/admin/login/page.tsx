@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { SkyReachBird } from '@/components/bird/SkyReachBird';
+import { BrandLogo } from '@/components/brand/BrandLogo';
 import { authService } from '@/lib/auth';
 import { Lock, Mail, Eye, EyeOff, ArrowRight, ShieldCheck } from 'lucide-react';
 
@@ -53,11 +53,8 @@ export default function AdminLoginPage() {
       >
         {/* Brand Header */}
         <div className="text-center mb-8">
-          <Link href="/" className="inline-flex items-center gap-3 group mb-4">
-            <SkyReachBird size={42} animateWing={true} glow={true} />
-            <span className="font-display text-2xl font-bold tracking-tight text-white">
-              SkyReach<span className="text-brand-orange">Media</span>
-            </span>
+          <Link href="/" className="inline-flex group mb-4" aria-label="SkyReach Media Home">
+            <BrandLogo variant="horizontal" className="h-12 w-auto" />
           </Link>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-zinc-400">
             <ShieldCheck className="w-3.5 h-3.5 text-brand-orange" />

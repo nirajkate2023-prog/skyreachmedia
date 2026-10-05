@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SkyReachBird } from './SkyReachBird';
+import { BrandLogo } from '../brand/BrandLogo';
 
 interface BirdLoaderProps {
   onComplete?: () => void;
@@ -102,7 +102,7 @@ export const BirdLoader: React.FC<BirdLoaderProps> = ({ onComplete }) => {
                     }
               }
             >
-              <SkyReachBird size={88} animateWing={true} glow={true} />
+              <BrandLogo variant="stacked" size={132} priority />
 
               {/* Luminous Flight Trail */}
               {isExiting && (
@@ -113,20 +113,6 @@ export const BirdLoader: React.FC<BirdLoaderProps> = ({ onComplete }) => {
                   transition={{ duration: 0.7 }}
                 />
               )}
-            </motion.div>
-
-            {/* Brand Title */}
-            <motion.div
-              className="mt-6 flex flex-col items-center"
-              animate={isExiting ? { opacity: 0, y: 15 } : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-            >
-              <span className="font-display text-xl tracking-[0.2em] uppercase font-bold text-white">
-                SkyReach<span className="text-brand-orange">Media</span>
-              </span>
-              <span className="font-mono text-xs tracking-widest text-brand-muted mt-1 uppercase">
-                Reach Higher
-              </span>
             </motion.div>
 
             {/* Progress Counter & Minimal Progress Line */}

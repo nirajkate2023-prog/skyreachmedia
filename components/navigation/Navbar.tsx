@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SkyReachBird } from '../bird/SkyReachBird';
+import { BrandLogo } from '../brand/BrandLogo';
 import { MagneticButton } from '../ui/MagneticButton';
 import { ArrowUpRight, Menu, X, Phone, MessageSquare } from 'lucide-react';
 import { COMPANY_DATA } from '@/data/companyData';
@@ -51,27 +51,17 @@ export const Navbar: React.FC = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
-          {/* Logo with Bird Mark */}
+          {/* Brand Logo */}
           <Link
             href="/"
-            className="group flex items-center gap-3 select-none"
+            className="group flex items-center select-none"
             data-cursor="link"
           >
-            <div className="relative transform transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-0.5">
-              <SkyReachBird size={36} animateWing={true} glow={true} />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display text-lg sm:text-xl font-bold tracking-tight text-white flex items-center">
-                SkyReach<span className="text-brand-orange">Media</span>
-              </span>
-              <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-brand-muted -mt-0.5 flex items-center gap-1">
-                <span>Innovate</span>
-                <span className="text-brand-orange">·</span>
-                <span>Elevate</span>
-                <span className="text-brand-orange">·</span>
-                <span>Dominate</span>
-              </span>
-            </div>
+            <BrandLogo
+              variant="horizontal"
+              priority
+              className="h-10 sm:h-11 w-auto transform transition-transform duration-300 group-hover:scale-[1.04]"
+            />
           </Link>
 
           {/* Desktop Navigation Links */}

@@ -135,16 +135,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {/* Google Tag Manager */}
-        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5FK46C96" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            `,
+            __html: `window.dataLayer=window.dataLayer||[];window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});`,
           }}
         />
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5FK46C96" />
         {/* End Google Tag Manager */}
       </head>
       <body className="antialiased bg-[#08090C] text-[#EDF2F7] relative">

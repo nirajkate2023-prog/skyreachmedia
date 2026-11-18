@@ -134,8 +134,30 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Google Tag Manager */}
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5FK46C96" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            `,
+          }}
+        />
+        {/* End Google Tag Manager */}
       </head>
       <body className="antialiased bg-[#08090C] text-[#EDF2F7] relative">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5FK46C96"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <BirdLoader />
         <LenisProvider>
           <NoiseOverlay />
